@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.DrinksView" prefHeight="440.0" prefWidth="660.0">
+    <ToolBar>
+        <Button onAction="#Back" text="Back" />
+    </ToolBar>
+    <HBox>
+        <VBox alignment="CENTER" spacing="10.0">
+            <TextField fx:id="nameField" promptText="Name" />
+            <TextField fx:id="originField" promptText="Origin" />
+            <TextField fx:id="typeField" promptText="Type" />
+            <TextField fx:id="descriptionField" promptText="Description" />
+            <Button onAction="#onAddDrink" text="Add" />
+        </VBox>
+        <TableView fx:id="tableView" minWidth="400" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="nameColumn" text="Name" />
+                <TableColumn fx:id="originColumn" text="Origin" />
+                <TableColumn fx:id="descriptionColumn" text="Description" />
+                <TableColumn fx:id="typeColumn" text="Type" />
+            </columns>
+        </TableView>
+    </HBox>
+</VBox>
