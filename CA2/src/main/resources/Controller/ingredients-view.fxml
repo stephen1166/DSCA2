@@ -15,9 +15,9 @@
     </ToolBar>
     <HBox alignment="CENTER" prefHeight="374.0" prefWidth="860.0" spacing="100.0">
         <VBox alignment="CENTER" spacing="10.0">
-            <TextField promptText="Name" />
-            <TextField promptText="Texture" />
-            <TextField promptText="ABV%" />
+            <TextField fx:id="Name" promptText="Name" />
+            <TextField fx:id="Texture" promptText="Texture" />
+            <TextField fx:id="ABVfield" promptText="ABV%" />
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Add" />
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Delete" />

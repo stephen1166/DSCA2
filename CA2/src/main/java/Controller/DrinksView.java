@@ -1,6 +1,7 @@
 package Controller;
 
 import Classes.Drink;
+import Util.Hashmap;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -38,7 +39,7 @@ public class DrinksView implements Initializable {
     @FXML
     private TableColumn<Drink, String> imageColumn;
     @FXML
-    private ObservableList<Drink> drinks = FXCollections.observableArrayList();
+    private Hashmap<Drink> drinks = new Hashmap<>(100);
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
