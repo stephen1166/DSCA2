@@ -77,4 +77,9 @@ public class DrinksView implements Initializable {
     protected void Back(){
         stage.setScene(mainScene);
     }
+
+    @FXML
+    protected void refreshTable(){
+        drinkView.refresh();
+    }
 }

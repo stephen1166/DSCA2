@@ -19,7 +19,7 @@
     <Button onAction="#Drinks" text="Drinks" />
     <Button onAction="#Ingredients" text="Ingredients" />
     <HBox alignment="TOP_CENTER" spacing="10">
-        <Button onAction="#Save" text="Save"/>
-        <Button onAction="#Load" text="Load"/>
+        <Button onAction="#save" text="Save"/>
+        <Button onAction="#load" text="Load"/>
     </HBox>
 </VBox>

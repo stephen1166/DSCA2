@@ -5,9 +5,11 @@ module com.example.ca {
     requires xstream;
 
     exports Classes;
-    opens Classes to javafx.base;
+    opens Classes to javafx.base,xstream;
     exports Main;
-    opens Main to javafx.fxml;
+    opens Main to javafx.fxml,xstream;
     exports Controller;
-    opens Controller to javafx.fxml;
+    opens Controller to javafx.fxml,xstream;
+    exports Util;
+    opens Util to javafx.fxml, xstream;
 }

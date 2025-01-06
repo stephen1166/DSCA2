@@ -65,4 +65,9 @@ public class IngredientsView implements Initializable {
     protected void Back() {
         stage.setScene(mainScene);
     }
+
+    @FXML
+    protected void refreshTable(){
+        ingredientView.refresh();
+    }
 }
