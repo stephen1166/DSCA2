@@ -1,8 +1,7 @@
 package Controller;
 
 import Classes.Drink;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import Util.Hashmap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -20,47 +19,34 @@ import static Main.MainMenu.stage;
 public class DrinksView implements Initializable {
 
     @FXML
-    private TextField nameField;
-    @FXML
-    private TextField typeField;
-    @FXML
-    private TextField originField;
-    @FXML
-    private TextField descriptionField;
-    @FXML
-    private TextField imageField;
+    private TextField nameField,typeField,originField,descriptionField,imageField;
 
     @FXML
-    private TableView<Drink> tableView;
+    private TableView<Drink> drinkView;
     @FXML
-    private TableColumn<Drink, String> nameColumn,typeColumn,originColumn,descriptionColumn;
+    private TableColumn<Drink, String> nameCol,typeCol,originCol,descriptionCol;
 
     @FXML
-    private TableColumn<Drink, String> imageColumn;
+    private TableColumn<Drink, String> imageCol;
     @FXML
-    private ObservableList<Drink> drinks = FXCollections.observableArrayList();
+    public static Hashmap<Drink> drinks=new Hashmap<>(100);
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Linking Columns to objects in Drink.java
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
-        originColumn.setCellValueFactory(new PropertyValueFactory<>("origin"));
-        descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
-        tableView.setItems(drinks);
-    }
-
-
-    @FXML
-    public void addDrink(String name, String type, String origin, String description, URL image) {
-        Drink newDrink = new Drink(name, type, origin, description, image);
-        drinks.add(newDrink);
-
-        System.out.println(drinks);
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        typeCol.setCellValueFactory(new PropertyValueFactory<>("type"));
+        originCol.setCellValueFactory(new PropertyValueFactory<>("origin"));
+        descriptionCol.setCellValueFactory(new PropertyValueFactory<>("description"));
+        for (int i=0;i<100;i++){
+            if (drinks.get(i)!=null) {
+                drinkView.getItems().add(drinks.get(i));
+            }
+        }
     }
 
     @FXML
-    public void onAddDrink(ActionEvent actionEvent) {
+    public void AddDrink(ActionEvent actionEvent) {
         String name = nameField.getText();
         String type = typeField.getText();
         String origin = originField.getText();
@@ -74,9 +60,17 @@ public class DrinksView implements Initializable {
             System.out.println("Invalid image URL");
         }
 
-        addDrink(name, type, origin, description, image);
+        Drink newDrink = new Drink(name, type, origin, description, image);
+        drinks.insert(newDrink);
+        drinkView.getItems().add(drinks.get(drinks.search(newDrink)));
+    }
 
-        tableView.refresh();
+    @FXML
+    public void RemoveDrink(ActionEvent actionEvent){
+        Drink temp=drinkView.getSelectionModel().getSelectedItem();
+        int index=drinkView.getSelectionModel().getSelectedIndex();
+        drinkView.getItems().remove(index);
+        drinks.remove(drinks.search(temp));
     }
 
     @FXML

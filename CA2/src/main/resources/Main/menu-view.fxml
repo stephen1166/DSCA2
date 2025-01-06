@@ -5,6 +5,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.HBox?>
 <VBox alignment="CENTER" spacing="20" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
       fx:controller="Controller.MenuView" prefHeight="440.0" prefWidth="660.0">
     <padding>
@@ -17,5 +18,8 @@
     </Label>
     <Button onAction="#Drinks" text="Drinks" />
     <Button onAction="#Ingredients" text="Ingredients" />
-
+    <HBox alignment="TOP_CENTER" spacing="10">
+        <Button onAction="#Save" text="Save"/>
+        <Button onAction="#Load" text="Load"/>
+    </HBox>
 </VBox>

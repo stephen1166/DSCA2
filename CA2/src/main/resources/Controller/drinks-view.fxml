@@ -14,14 +14,15 @@
             <TextField fx:id="originField" promptText="Origin" />
             <TextField fx:id="typeField" promptText="Type" />
             <TextField fx:id="descriptionField" promptText="Description" />
-            <Button onAction="#onAddDrink" text="Add" />
+            <Button onAction="#AddDrink" text="Add" />
+            <Button onAction="#RemoveDrink" text="Remove"/>
         </VBox>
-        <TableView fx:id="tableView" minWidth="400" VBox.vgrow="ALWAYS">
+        <TableView fx:id="drinkView" minWidth="400" VBox.vgrow="ALWAYS">
             <columns>
-                <TableColumn fx:id="nameColumn" text="Name" />
-                <TableColumn fx:id="originColumn" text="Origin" />
-                <TableColumn fx:id="descriptionColumn" text="Description" />
-                <TableColumn fx:id="typeColumn" text="Type" />
+                <TableColumn fx:id="nameCol" text="Name" />
+                <TableColumn fx:id="originCol" text="Origin" />
+                <TableColumn fx:id="descriptionCol" text="Description" />
+                <TableColumn fx:id="typeCol" text="Type" />
             </columns>
         </TableView>
     </HBox>
