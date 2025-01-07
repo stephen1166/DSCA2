@@ -52,12 +52,6 @@ public class MenuView implements iSerializer {
         in1.close();
     }
 
-    /**
-     * The save method uses the XStream component to write all the objects in the posts ArrayList
-     * to the posts.xml file stored on the hard disk.
-     *
-     * @throws Exception  An exception is thrown if an error occurred during the save e.g. drive is full.
-     */
     public void save() throws Exception {
         XStream xstream = new XStream(new DomDriver());
         ObjectOutputStream out = xstream.createObjectOutputStream(new FileWriter("Hashmaps.xml"));
