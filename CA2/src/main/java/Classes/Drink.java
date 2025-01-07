@@ -14,18 +14,10 @@ public class Drink {
 
     //Constructor
     public Drink(String name, String type, String origin, String description, URL image) {
-        if (Utilities.validateStringLength(name,25)) {
-            this.name = name;
-        }
-        if (Utilities.validateStringLength(type,15)) {
-            this.type = type;
-        }
-        if (Utilities.validateStringLength(origin,30)) {
-            this.origin = origin;
-        }
-        if (Utilities.validateStringLength(description,500)) {
-            this.description = description;
-        }
+        this.name = Utilities.truncateString(name, 25);
+        this.type = Utilities.truncateString(type, 15);
+        this.origin = Utilities.truncateString(origin, 30);
+        this.description = Utilities.truncateString(description, 500);
         this.image = image;
     }
 
