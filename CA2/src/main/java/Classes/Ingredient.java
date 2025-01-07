@@ -37,17 +37,13 @@ public class Ingredient {
     }
 
     public Ingredient(String n,String t,Double a){
-        if (Utilities.validateStringLength(n,30)) {
-            name = n;
-        }
-        if (Utilities.validateStringLength(t,100)) {
-            texture = t;
-        }
-        if (Utilities.validRange(a,0,100)) {
+            name = Utilities.truncateString(n,30);
+            texture = Utilities.truncateString(t,100);
+        if (Utilities.validRange(a,0.0,100.0)) {
             abv = a;
         }
         else {
-            abv = (double) -1;
+            abv = -1.0;
         }
     }
 
