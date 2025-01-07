@@ -19,11 +19,9 @@
             <TextField fx:id="typeField" promptText="Type" />
             <TextField fx:id="descriptionField" promptText="Description" />
          <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-            <children>
-                  <Button onAction="#AddDrink" text="Add" />
-                  <Button onAction="#RemoveDrink" text="Remove" />
-               <Button onAction="#refreshTable" lineSpacing="10.0" mnemonicParsing="false" text="Refresh" />
-            </children>
+             <Button onAction="#AddDrink" text="Add" />
+             <Button onAction="#RemoveDrink" text="Remove" />
+             <Button onAction="#refreshDrink" text="Refresh"/>
          </HBox>
         </VBox>
         <TableView fx:id="drinkView" minWidth="400" VBox.vgrow="ALWAYS">

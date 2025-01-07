@@ -9,7 +9,6 @@ import com.thoughtworks.xstream.io.xml.DomDriver;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
-import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 
 import java.io.*;

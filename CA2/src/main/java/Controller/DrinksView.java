@@ -78,8 +78,11 @@ public class DrinksView implements Initializable {
         stage.setScene(mainScene);
     }
 
-    @FXML
-    protected void refreshTable(){
-        drinkView.refresh();
+    public void refreshDrink(){
+        for (int i=0;i<100;i++){
+            if (drinks.get(i)!=null) {
+                drinkView.getItems().add(drinks.get(i));
+            }
+        }
     }
 }

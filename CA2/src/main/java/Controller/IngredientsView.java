@@ -66,8 +66,11 @@ public class IngredientsView implements Initializable {
         stage.setScene(mainScene);
     }
 
-    @FXML
-    protected void refreshTable(){
-        ingredientView.refresh();
+    public void refreshIngredient(){
+        for (int i = 0; i < 100; i++) { // TODO change to fit any hashmap size
+            if (ingredients.get(i) != null) {
+                ingredientView.getItems().add(ingredients.get(i));
+            }
+        }
     }
 }

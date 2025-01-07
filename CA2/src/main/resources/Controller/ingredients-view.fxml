@@ -20,7 +20,7 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#AddIngredient" text="Add" />
                 <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Delete" />
-            <Button onAction="#refreshTable" mnemonicParsing="false" text="Refresh" />
+                <Button onAction="#refreshIngredient" text="Refresh"/>
             </HBox>
         </VBox>
         <TableView fx:id="ingredientView">
