@@ -17,25 +17,22 @@ import static Main.MainMenu.stage;
 
 public class MenuView implements iSerializer {
 
-    private FXMLLoader drinksLoader=new FXMLLoader(getClass().getResource("drinks-view.fxml"));
-    private FXMLLoader ingredientsLoader=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
-    private Scene drinksScene;
-    private Scene ingredientsScene;
-
-
-
     public MenuView() throws IOException {
-        drinksScene=new Scene(drinksLoader.load());
-        ingredientsScene=new Scene(ingredientsLoader.load());
+
+
     }
 
     @FXML
     protected void Drinks() throws IOException {
+        FXMLLoader drinksLoader=new FXMLLoader(getClass().getResource("drinks-view.fxml"));
+        Scene drinksScene=new Scene(drinksLoader.load());
         stage.setScene(drinksScene);
     }
 
     @FXML
     protected void Ingredients() throws IOException {
+        FXMLLoader ingredientsLoader=new FXMLLoader(getClass().getResource("ingredients-view.fxml"));
+        Scene ingredientsScene=new Scene(ingredientsLoader.load());
         stage.setScene(ingredientsScene);
     }
 
