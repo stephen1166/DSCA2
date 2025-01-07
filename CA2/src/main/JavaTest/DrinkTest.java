@@ -13,38 +13,50 @@ public class DrinkTest {
 
     @BeforeEach
     void setUp() {
-        //author 9 chars, message 39 chars
-        messagePostBelow = new MessagePost("Mairead M", "Programming fundamentals assignment due");
-        //author 10 chars, message 40 chars
-        messagePostExact = new MessagePost("SiobhanDro", "Objects and Classes Lecture starting now");
-        //author 11 chars, message 41 chars
-        messagePostAbove = new MessagePost("SiobhanRoch", "Computing and Maths Centre open from 9am.");
-        //author 0 chars, message 0 chars
-        messagePostZero = new MessagePost("", "");
+        Below = new Drink("this msg is 24 character", "-------------]","----------------------------]","------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]",null);
+        Exact = new Drink("this msg is 25 characters", "-------------]-","----------------------------]-","------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]-",null);
+        Above = new Drink("this msg is 26 characters+", "-------------]-+","----------------------------]-+","------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]-+",null);
+        Zero = new Drink("", "","","",null);
     }
 
     @AfterEach
     void tearDown() {
-        messagePostBelow = messagePostExact = messagePostAbove = messagePostZero = null;
+        Below = Exact = Above = Zero = null;
     }
 
     @Nested
     class Getters {
 
         @Test
-        void getMessage() {
-            assertEquals("Programming fundamentals assignment due", messagePostBelow.getMessage());
-            assertEquals("Objects and Classes Lecture starting now", messagePostExact.getMessage());
-            assertEquals("Computing and Maths Centre open from 9am", messagePostAbove.getMessage());
-            assertEquals("", messagePostZero.getMessage());
+        void getName() {
+            assertEquals("this msg is 24 character", Below.getName());
+            assertEquals("this msg is 25 characters", Exact.getName());
+            assertEquals("this msg is 26 characters", Above.getName());
+            assertEquals("", Zero.getName());
         }
 
         @Test
-        void getAuthor() {
+        void getType() {
+            assertEquals("-------------]", Below.getType());
+            assertEquals("-------------]-", Exact.getType());
+            assertEquals("-------------]-", Above.getType());
+            assertEquals("", Zero.getType());
         }
 
         @Test
-        void getLikes() {
+        void getOrigin() {
+            assertEquals("----------------------------]", Below.getOrigin());
+            assertEquals("----------------------------]-", Exact.getOrigin());
+            assertEquals("----------------------------]-", Above.getOrigin());
+            assertEquals("", Zero.getOrigin());
+        }
+
+        @Test
+        void getDescription() {
+            assertEquals("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]", Below.getDescription());
+            assertEquals("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]-", Exact.getDescription());
+            assertEquals("------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------]-", Above.getDescription());
+            assertEquals("", Zero.getDescription());
         }
 
     }
@@ -53,79 +65,32 @@ public class DrinkTest {
     class Setters {
 
         @Test
-        void setMessage() {
-            assertEquals("Programming fundamentals assignment due", messagePostBelow.getMessage());
+        void setName() {
+            assertEquals("", Zero.getName());
 
-            messagePostBelow.setMessage("Programming fundamentals results -- out");   //39 chars - update performed
-            assertEquals("Programming fundamentals results -- out", messagePostBelow.getMessage());
+            Below.setName("this msg is 24 character");
+            assertEquals("this msg is 24 character", Below.getName());
 
-            messagePostBelow.setMessage("Programming fundamentals results are out");   //40 chars - update performed
-            assertEquals("Programming fundamentals results are out", messagePostBelow.getMessage());
+            Exact.setName("this msg is 25 characters");
+            assertEquals("this msg is 25 characters", Exact.getName());
 
-            messagePostBelow.setMessage("Programming fundamentals module now over!");   //41 chars - update ignored
-            assertEquals("Programming fundamentals results are out", messagePostBelow.getMessage());
+            Above.setName("this msg is 26 characters-");
+            assertEquals("this msg is 26 characters", Above.getName());
         }
 
         @Test
-        void setAuthor() {
+        void setType() {
         }
 
         @Test
-        void setLikes() {
-        }
-
-    }
-
-    @Nested
-    class DisplayMethods {
-
-        @Test
-        void testDisplay() {
-            //testing the display when a post has no likes
-            String toStringContents = messagePostExact.display();
-            assertTrue(toStringContents.contains(messagePostExact.getAuthor()));
-            assertTrue(toStringContents.contains(messagePostExact.getMessage()));
-            assertTrue(toStringContents.contains("0 likes"));
-
-            //testing the display when a post has likes
-            messagePostExact.setLikes(1);
-            assertTrue(messagePostExact.display().contains("1 people like this"));
+        void setOrigin() {
         }
 
         @Test
-        void testDisplayCondensed(){
-
-        }
-    }
-
-    @Nested
-    class LikesOnPosts {
-
-        @Test
-        void testingLikingOfPosts() {
-            assertEquals(0, messagePostExact.getLikes());
-
-            messagePostExact.likeAPost();
-            assertEquals(1, messagePostExact.getLikes());
-
-            messagePostExact.likeAPost();
-            assertEquals(2, messagePostExact.getLikes());
+        void setDescription() {
 
         }
 
-        @Test
-        void testingUnLikingOfPosts() {
-            assertEquals(0, messagePostExact.getLikes());
-
-            messagePostExact.unlikeAPost();
-            assertEquals(0, messagePostExact.getLikes());
-
-            messagePostExact.setLikes(2);
-            assertEquals(2, messagePostExact.getLikes());
-
-            messagePostExact.unlikeAPost();
-            assertEquals(1, messagePostExact.getLikes());
-        }
     }
 
 }
