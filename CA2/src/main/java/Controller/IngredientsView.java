@@ -46,7 +46,7 @@ public class IngredientsView implements Initializable {
     public void AddIngredient(ActionEvent actionEvent) {
         String name = nameField.getText();
         String texture = textureField.getText();
-        String abv = abvField.getText();
+        Double abv = Double.valueOf(abvField.getText());
 
         Ingredient newIngredient = new Ingredient(name,texture,abv);
         ingredients.insert(newIngredient);

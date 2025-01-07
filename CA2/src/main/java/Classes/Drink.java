@@ -1,21 +1,31 @@
 package Classes;
 
+import jdk.jshell.execution.Util;
+import Util.*;
 import java.net.URL;
 
 public class Drink {
 
-    private String name;
-    private String type;
-    private String origin;
-    private String description;
+    private String name; // 25 char max
+    private String type; // 15 char alphabet only
+    private String origin; // 30 char alphabet only
+    private String description; // 500 char
     private URL image;
 
     //Constructor
     public Drink(String name, String type, String origin, String description, URL image) {
-        this.name = name;
-        this.type = type;
-        this.origin = origin;
-        this.description = description;
+        if (Utilities.validateStringLength(name,25)) {
+            this.name = name;
+        }
+        if (Utilities.validateStringLength(type,15)) {
+            this.type = type;
+        }
+        if (Utilities.validateStringLength(origin,30)) {
+            this.origin = origin;
+        }
+        if (Utilities.validateStringLength(description,500)) {
+            this.description = description;
+        }
         this.image = image;
     }
 
@@ -43,26 +53,26 @@ public class Drink {
 
     //Setters
     public void setName(String name) {
-        this.name = name;
+        this.name = Utilities.truncateString(name, 25);
     }
 
     public void setType(String type) {
-        this.type = type;
+        this.type = Utilities.truncateString(type, 15);
     }
 
     public void setOrigin(String origin) {
-        this.origin = origin;
+        this.origin = Utilities.truncateString(origin, 30);
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.description = Utilities.truncateString(description, 500);
     }
 
     public void setImage(URL image) {
         this.image = image;
     }
 
-    //toString
+    //toString TODO set up nicer to string
     @java.lang.Override
     public java.lang.String toString() {
         return "Drink{" +

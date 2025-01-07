@@ -53,8 +53,6 @@ public class MenuView implements iSerializer {
         IngredientsView.ingredients = (Hashmap<Ingredient>) in1.readObject();
         DrinksView.drinks = (Hashmap<Drink>) in1.readObject();
         in1.close();
-        System.out.println(IngredientsView.ingredients);
-        System.out.println(DrinksView.drinks);
     }
 
     /**
@@ -69,6 +67,5 @@ public class MenuView implements iSerializer {
         out.writeObject(IngredientsView.ingredients);
         out.writeObject(DrinksView.drinks);
         out.close();
-        System.out.println("SUCCSESSSRGAJBJBKA");
     }
 }

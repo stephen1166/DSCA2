@@ -3,6 +3,7 @@ module com.example.ca {
     requires javafx.controls;
     requires javafx.fxml;
     requires xstream;
+    requires jdk.jshell;
 
     exports Classes;
     opens Classes to javafx.base,xstream;
