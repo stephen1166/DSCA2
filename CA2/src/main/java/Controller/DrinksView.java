@@ -4,6 +4,7 @@ import Classes.Drink;
 import Util.Hashmap;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
@@ -88,13 +89,7 @@ public class DrinksView implements Initializable {
         stage.setScene(mainScene);
     }
 
-    public void refreshDrink(){
-        drinkView.getItems().clear();
-        for (int i=0;i<100;i++){
-            if (drinks.get(i)!=null) {
-                drinkView.getItems().add(drinks.get(i));
-            }
-        }
+    public void Recipe(ActionEvent actionEvent) {
     }
 
     @FXML
@@ -141,4 +136,6 @@ public class DrinksView implements Initializable {
             System.out.println("Invalid Option selected");
         }
     }
+
+
 }

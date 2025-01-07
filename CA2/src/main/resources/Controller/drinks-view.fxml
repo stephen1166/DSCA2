@@ -12,6 +12,7 @@
 <VBox prefHeight="440.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DrinksView">
     <ToolBar>
         <Button onAction="#Back" text="Back" />
+        <Button onAction="#Recipe" text="Recipe" />
     </ToolBar>
     <HBox alignment="CENTER">
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="197.0">
@@ -24,7 +25,6 @@
                <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                    <Button onAction="#AddDrink" text="Add" />
                    <Button onAction="#RemoveDrink" text="Remove" />
-                   <Button onAction="#refreshDrink" text="Refresh" />
                </HBox>
               </VBox>
               <VBox alignment="CENTER" prefHeight="203.0" prefWidth="183.0" spacing="10.0">

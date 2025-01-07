@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Controller.RecipeView" prefHeight="400.0" prefWidth="600.0">
+    <ToolBar prefHeight="43.0" prefWidth="860.0">
+        <Button onAction="#Back" text="Back" />
+        <Button onAction="#Home" text="Home" />
+    </ToolBar>
+
+</VBox>

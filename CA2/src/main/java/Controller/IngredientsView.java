@@ -81,15 +81,6 @@ public class IngredientsView implements Initializable {
         stage.setScene(mainScene);
     }
 
-    public void refreshIngredient(){
-        ingredientView.getItems().clear();
-        for (int i = 0; i < 100; i++) { // TODO change to fit any hashmap size
-            if (ingredients.get(i) != null) {
-                ingredientView.getItems().add(ingredients.get(i));
-            }
-        }
-    }
-
     @FXML
     public void Search(){
         if(searchOptions.getSelectionModel().getSelectedItem().equals("Search by Name")){
