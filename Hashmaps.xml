@@ -3,21 +3,63 @@
     <hashTable>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>whiskey</name>
+        <texture>rough</texture>
+        <abv>40.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
+      <Classes.Ingredient>
+        <name>cider</name>
+        <texture>bitter</texture>
+        <abv>4.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>lemonade</name>
+        <texture>bubbly</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>coffee</name>
+        <texture>smooth</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>beer</name>
+        <texture>smooth</texture>
+        <abv>5.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
+      <Classes.Ingredient>
+        <name>cola</name>
+        <texture>fizzy</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>white wine</name>
+        <texture>smooth, dry</texture>
+        <abv>5.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
@@ -36,10 +78,28 @@
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>water</name>
+        <texture>smooth</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
+      <Classes.Ingredient>
+        <name>suger</name>
+        <texture>crunchy</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>cream liqueur</name>
+        <texture>creamy</texture>
+        <abv>12.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
@@ -70,8 +130,20 @@
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>red bull</name>
+        <texture>fizzy</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>vodka</name>
+        <texture>smooth</texture>
+        <abv>60.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
@@ -80,6 +152,12 @@
       <null/>
       <null/>
       <null/>
+      <Classes.Ingredient>
+        <name>red wine</name>
+        <texture>fruity</texture>
+        <abv>5.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
       <null/>
       <null/>
       <null/>
@@ -87,21 +165,14 @@
       <null/>
       <null/>
       <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
-      <null/>
+      <Classes.Ingredient>
+        <name>milk</name>
+        <texture>creamy</texture>
+        <abv>0.0</abv>
+        <ml>0</ml>
+      </Classes.Ingredient>
     </hashTable>
+    <size>100</size>
   </Util.Hashmap>
   <Util.Hashmap>
     <hashTable>
@@ -141,12 +212,7 @@
       <null/>
       <null/>
       <null/>
-      <Classes.Drink>
-        <name>1</name>
-        <type>3</type>
-        <origin>2</origin>
-        <description>4</description>
-      </Classes.Drink>
+      <null/>
       <null/>
       <null/>
       <null/>
@@ -211,5 +277,6 @@
       <null/>
       <null/>
     </hashTable>
+    <size>100</size>
   </Util.Hashmap>
 </object-stream>
