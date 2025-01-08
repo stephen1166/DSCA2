@@ -12,5 +12,22 @@
         <Button onAction="#Back" text="Back" />
         <Button onAction="#Home" text="Home" />
     </ToolBar>
-
+    <HBox>
+        <VBox spacing="10" >
+            <ComboBox fx:id="ingredientOptions" prefWidth="150.0" promptText="Ingredients" visibleRowCount="5" />
+            <TextField fx:id="mlField" promptText="ml" />
+            <HBox>
+                <Button onAction="#Add" text="Add" />
+                <Button onAction="#Remove" text="Remove" />
+            </HBox>
+        </VBox>
+        <TableView fx:id="ingredientView">
+            <columns>
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="textureCol" prefWidth="75.0" text="Texture" />
+                <TableColumn fx:id="abvCol" prefWidth="75.0" text="ABV" />
+                <TableColumn fx:id="mlCol" text="ml" />
+            </columns>
+        </TableView>
+    </HBox>
 </VBox>

@@ -4,9 +4,19 @@ import Classes.Drink;
 
 public class Hashmap<E>{
     private E[] hashTable;
+    private int size;
 
-    public Hashmap(int size) {
-        hashTable = (E[]) new Object[size];
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public Hashmap(int s) {
+        hashTable = (E[]) new Object[s];
+        size=s;
     }
 
     public int hash(E item) {

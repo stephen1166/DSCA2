@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="440.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DrinksView">
+<VBox prefHeight="440.0" prefWidth="660.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.DrinksView">
     <ToolBar>
         <Button onAction="#Back" text="Back" />
         <Button onAction="#Recipe" text="Recipe" />
@@ -25,7 +25,6 @@
                <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                    <Button onAction="#AddDrink" text="Add" />
                    <Button onAction="#RemoveDrink" text="Remove" />
-                   <Button onAction="#refreshDrink" text="Refresh" />
                </HBox>
               </VBox>
               <VBox alignment="CENTER" prefHeight="203.0" prefWidth="183.0" spacing="10.0">
@@ -41,6 +40,7 @@
                 <TableColumn fx:id="originCol" text="Origin" />
                 <TableColumn fx:id="descriptionCol" text="Description" />
                 <TableColumn fx:id="typeCol" text="Type" />
+                <TableColumn fx:id="abvCol" text="ABV" />
             </columns>
         </TableView>
     </HBox>

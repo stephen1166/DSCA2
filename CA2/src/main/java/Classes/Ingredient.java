@@ -10,6 +10,15 @@ public class Ingredient {
 
     private Double abv; //100.00 6 char range 0 - 100
 
+    private int ml;
+
+    public Ingredient(Ingredient ingredient) {
+        this.name=ingredient.name;
+        this.texture=ingredient.texture;
+        this.abv=ingredient.abv;
+        ml=0;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,7 +45,15 @@ public class Ingredient {
         }
     }
 
-    public Ingredient(String n,String t,Double a){
+    public int getMl() {
+        return ml;
+    }
+
+    public void setMl(int ml) {
+        this.ml = ml;
+    }
+
+    public Ingredient(String n, String t, Double a){
             name = Utilities.truncateString(n,30);
             texture = Utilities.truncateString(t,100);
         if (Utilities.validRange(a,0.0,100.0)) {
@@ -45,6 +62,7 @@ public class Ingredient {
         else {
             abv = -1.0;
         }
+        ml=0;
     }
 
     //toString TODO set up nicer to string
